@@ -1,0 +1,192 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+
+}
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+    html{
+        font-size: 58%;
+    }
+    .sec_bg{
+    padding: 50px 35px;
+}
+.graf_img img{
+    width: 100%;
+}
+.col-lg-7 .graf_img {
+    margin-top: 10px;
+}
+.high-chart.aln ul {
+    width: 490px;
+}
+.high-chart ul { 
+    width: 340px; 
+}
+
+}
+
+ 
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+.Mobile_Menu{display: block !important;}
+/* Mobile Menu End___________ */
+
+.traupe_img{padding-right: 0;}
+html{
+    font-size: 58%;
+}
+.sec_bg{padding: 40px 35px;}
+.graf_img img{
+width: 100%;
+}
+.col-lg-7 .graf_img {
+margin-top: 10px;
+}
+.ins_left {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.sec_title h5{
+    width: 370px;
+}
+.high-chart.aln {
+    margin-bottom: 50px;
+}
+div#graph svg {
+    width: 100%;
+    margin-left: 13px;
+}
+.high-chart ul {
+    width: 575px;
+    margin: auto;
+    margin-left: 55px;
+}
+.high-chart.aln ul {
+    width: 95%;
+}
+.menus ul{
+    left: auto;
+    right: 0;
+}
+.graf_img {
+    width: 670px;
+    margin: auto;
+}
+}
+
+ 
+/* small mobile :320px. */
+@media (max-width: 767px) {
+
+    .Mobile_Menu{display: block !important;}
+    #my-navigation{width: 100%;}
+/* Mobile Menu End___________ */
+
+
+.traupe_img{padding-right: 0;display: none;}
+html{
+    font-size: 55%;
+}
+.sec_bg{padding: 30px 20px;margin-bottom: 15px;}
+.graf_img img{
+width: 100%;
+}
+a.sec_btn{
+    padding: 15px 20px;
+}
+.col-lg-7 .graf_img {margin-top: 10px;margin-bottom: 50px;}
+.ins_left {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.sec_title h5{
+    width: auto;
+}
+.progress-blk .content h2 { 
+    font-size: 26px;
+    line-height: 30px; 
+}
+.menus ul{
+    left: auto;
+    right: 0;
+}
+.navs-area nav a { 
+    font-size: 13px;
+    margin-bottom: 25px; 
+}
+.navs-area nav a i { 
+    font-size: 22px; 
+}
+.logo { 
+    margin: 40px 0;
+    margin-bottom: 40px;
+}
+.single-rank p { 
+    line-height: 18px;
+}
+.circle-big { 
+    transform: scale(.7);
+    margin-bottom: -30px;
+}
+.ins_tab:after { 
+    display: none;
+}
+.ins_tab ul.nav-pills .nav-link.active::after { 
+    height: 3px;
+    top: 21px;
+}
+.ins_tab ul li {
+    margin-top: 10px;
+}
+.ins_left_img img{
+    max-width: 90px;
+    margin-left: 10px;
+}
+.with-prog .prograssbar { 
+    height: 10px; 
+} 
+.with-prog p { 
+    font-size: 16px; 
+}
+.all-rank-circles .single-rank.first {
+    margin-right: 0;
+}
+.all-rank-circles { 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.progress-blk img {
+    margin-right: 10px;
+    max-width: 80px;
+} 
+.border_btm:after { 
+    width: 100%;  
+}
+.sec_title h2 { 
+    font-size: 3rem;
+ }
+ .sec_title h5 { 
+    font-size: 15px;
+}
+.navs-area .sec_bg { 
+    padding-bottom: 0;
+}
+.high-chart {
+    width: 580px;
+    margin-left: 10px;
+}
+.graf_img {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+div#graph svg {
+    width: 390px;
+}  
+}
+  

@@ -1,0 +1,622 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Site Title Here</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/fontawesome.css">
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/morris.css"> 
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+
+        
+        <!--==================== header-Section start ============-->
+            <header >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="assets/img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        <!--============ header-Section end =================-->
+     
+
+
+        <main id="convert">
+
+
+            <!-- Navs-area START -->
+            <div class="navs-area">
+                <div class="container">
+                    <div class="sec_bg">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <a class="nav-link active" id="nav-dashboard-tab" data-toggle="tab" href="#nav-dashboard" role="tab" aria-controls="nav-dashboard" aria-selected="true"><i class="fal fa-desktop-alt"></i>Dashboard</a>
+                                        <a class="nav-link" id="nav-awards-tab" data-toggle="tab" href="#nav-awards" role="tab" aria-controls="nav-awards" aria-selected="false"><i class="fal fa-star"></i>Awards</a>
+                                        <a class="nav-link" id="nav-dein-tab" data-toggle="tab" href="#nav-dein" role="tab" aria-controls="nav-dein" aria-selected="false"><i class="fal fa-home"></i>dein unternehmen</a>
+                                        <a class="nav-link" id="nav-deine-tab" data-toggle="tab" href="#nav-deine" role="tab" aria-controls="nav-deine" aria-selected="false"><i class="fal fa-folder-open"></i>deine umsatze</a>
+                                        <div class="menus">
+                                            <a href="" class="userInfo"><i class="fal fa-user"></i> </a>
+                                            <ul>
+                                                <li><a href="#">Profile</a></li>
+                                                <li><a href="#">Setting</a></li>
+                                                <li><a href="#">logout</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navs-area END -->
+ 
+    
+
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-dashboard" role="tabpanel" aria-labelledby="nav-dashboard-tab">
+                    <!-- Section-start -->
+                    <section class="traupe_sec">
+                        <div class="container">
+                            <div class="sec_bg">
+                                <div class="row">
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="traupe" v-if="loading"> 
+                                            <ul style="display: none;">
+                                                <li class="jan">{{ myJson.stats.year.Jan || 0 }}</li>
+                                                <li class="feb">{{ myJson.stats.year.Feb || 0 }}</li>
+                                                <li class="mrc">{{ myJson.stats.year.Mar || 0 }} </li>
+                                                <li class="apr">{{ myJson.stats.year.Apr || 0 }} </li>
+                                                <li class="mai">{{ myJson.stats.year.Mai || 0 }} </li>
+                                                <li class="jun">{{ myJson.stats.year.Jun || 0 }} </li>
+                                                <li class="jul">{{ myJson.stats.year.Jul || 0 }} </li>
+                                                <li class="aug">{{ myJson.stats.year.Aug || 0 }} </li>
+                                                <li class="sep">{{ myJson.stats.year.Sep || 0 }} </li>
+                                                <li class="okt">{{ myJson.stats.year.Okt || 0 }} </li>
+                                                <li class="nov">{{ myJson.stats.year.Nov || 0 }} </li>
+                                                <li class="diz">{{ myJson.stats.year.Dez || 0 }} </li>
+                                                
+                                                <li class="n">{{   myJson.stats.month[1] || 0 }} </li>
+                                                <li class="n2">{{  myJson.stats.month[2] || 0 }} </li>
+                                                <li class="n3">{{  myJson.stats.month[3] || 0 }} </li>
+                                                <li class="n4">{{  myJson.stats.month[4] || 0 }} </li>
+                                                <li class="n5">{{  myJson.stats.month[5] || 0 }} </li>
+                                                <li class="n6">{{  myJson.stats.month[6] || 0 }} </li>
+                                                <li class="n7">{{  myJson.stats.month[7] || 0 }} </li>
+                                                <li class="n8">{{  myJson.stats.month[8] || 0 }} </li>
+                                                <li class="n9">{{  myJson.stats.month[9] || 0 }} </li>
+                                                <li class="n10">{{ myJson.stats.month[10] || 0 }} </li>
+                                                <li class="n11">{{ myJson.stats.month[11] || 0 }} </li>
+                                                <li class="n12">{{ myJson.stats.month[12] || 0 }} </li>
+                                                <li class="n13">{{ myJson.stats.month[13] || 0 }} </li>
+                                                <li class="n14">{{ myJson.stats.month[14] || 0 }} </li>
+                                                <li class="n15">{{ myJson.stats.month[15] || 0 }} </li>
+                                                <li class="n16">{{ myJson.stats.month[16] || 0 }} </li>
+                                                <li class="n17">{{ myJson.stats.month[17] || 0 }} </li>
+                                                <li class="n18">{{ myJson.stats.month[18] || 0 }} </li>
+                                                <li class="n19">{{ myJson.stats.month[19] || 0 }} </li>
+                                                <li class="n20">{{ myJson.stats.month[20] || 0 }} </li>
+                                                <li class="n21">{{ myJson.stats.month[21] || 0 }} </li>
+                                                <li class="n22">{{ myJson.stats.month[22] || 0 }} </li>
+                                                <li class="n23">{{ myJson.stats.month[23] || 0 }} </li>
+                                                <li class="n24">{{ myJson.stats.month[24] || 0 }} </li>
+                                                <li class="n25">{{ myJson.stats.month[25] || 0 }} </li>
+                                                <li class="n26">{{ myJson.stats.month[26] || 0 }} </li>
+                                                <li class="n27">{{ myJson.stats.month[27] || 0 }} </li>
+                                                <li class="n28">{{ myJson.stats.month[28] || 0 }} </li>
+                                                <li class="n29">{{ myJson.stats.month[29] || 0 }} </li>
+                                                <li class="n30">{{ myJson.stats.month[30] || 0 }} </li>
+                                                <li class="n31">{{ myJson.stats.month[31] || 0 }} </li>
+                                            </ul> 
+                                            <div class="sec_title">
+                                                <h2 style="color: #0d2333;">Hallo<span> {{myJson.firstname}} {{myJson.lastname}}.</span></h2>
+                                                <h5>Du hast durch Weiterempfehlungen bereits <strong>{{myJson.accountBalance}}€</strong> verdient.</h5>
+                                                <a href="#" class="sec_btn">Jetzt Produkt weiterempfehlen</a>
+                                            </div>
+                                            <div class="traupe_img">
+                                                <img src="assets/img/hello.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section-end -->
+
+                    <!-- Section-start -->
+                    <section class="rank-area">
+                        <div class="container">
+                            <div class="sec_bg">
+                                <div class="row">
+                                    <div class="col-lg-5" v-if="loading">
+                                        <div class="sec_title border_btm afn">
+                                            
+                                            <h2>Aktueller Rank:  <span>{{myJson.rank.name}}</span></h2>
+                                            <p>Du verdienst aktuell <span style="color: #e4c064;">{{myJson.rank.currentEarning}}% pro Neuempfehlung</span> <span style="display: block;color: #a6a5a5;">Rank {{myJson.rank.currentRankIndex}}/{{myJson.rank.maxRankIndex}}</span></p>
+
+                                            <h4>Nächste Stufe: {{myJson.rank.nextEarning}}% Provision <small>Rank {{myJson.rank.nextRankIndex}}/{{myJson.rank.maxRankIndex}}</small></h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="ranks"> 
+
+                                            <div class="all-rank-circles">
+                                                <div class="single-rank first" v-if="loading">
+                                                    <div class="circle-big">
+                                                        <div class="text">
+                                                            <img src="assets/img/grp.png" alt="">
+                                                            <span class="span"><span style="color:#d3d3d3">{{myJson.rank.referenceCount}}</span><span>/{{myJson.rank.goalReferenceCount}}</span> </span>
+                                                        </div>
+                                                        <div class="f-line"></div>
+                                                        <svg>
+                                                            <circle class="bg" cx="92" cy="92" r="85"></circle>
+                                                            <circle class="progress" cx="93" cy="92" r="85"></circle>
+                                                        </svg>
+                                                    </div>
+                                                    <p>Nur noch 2 Empfehlungen bis zur nächsten Stufe.</p>
+                                                </div>
+                                                <div class="single-rank offN">
+                                                    <div class="circle-big">
+                                                        <div class="text">
+                                                            <img src="assets/img/prj.png" alt="">
+                                                        </div>
+                                                        <svg>
+                                                            <circle class="bg" cx="92" cy="92" r="85"></circle>
+                                                            <circle class="progress" cx="93" cy="92" r="85"></circle>
+                                                        </svg>
+                                                    </div>
+                                                    <p>Nächste Stufe: Anwärter</p>
+                                                </div>
+                                            </div>
+  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section-end -->
+
+                    <!-- Section-start -->
+                    <section class="Insights_sec">
+                        <div class="container">
+                            <div class="sec_bg">
+                                <div class="row">
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="sec_title border_btm">
+                                            <h2>Deine<span>Insights.</span></h2>
+                                            <p>Aktueller Status deiner Weiterempfehlungen</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div v-if="loading">
+                                    <div class="bkr offNow" style="margin-bottom: 50px;" v-for="(entry, index) in myJson.references" :key="index">
+                                        <div class="row">
+                                            <div class="col-lg-5 col-md-12 col-sm-12">
+                                                <div class="ins_left">
+                                                    <div class="ins_left_cont"> 
+                                                        <h4> {{entry.product}} </h4>
+                                                        <p>Vermittelt an: {{ entry.firstname }} {{entry.lastname}}</p>
+                                                    </div>
+                                                    <div class="ins_left_img">
+                                                        <img src="assets/img/book.png" alt="">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-7 col-md-12 col-sm-12">
+                                                <div class="ins_tab">
+                                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                        <li class="nav-item">
+                                                        <a v-if="entry.state === 'SETTING'" class="nav-link active" id="pills-st-tab" data-toggle="pill" href="#pills-st" role="tab" aria-controls="pills-st" aria-selected="true">1. Setting Gespräch	</a>
+                                                        <a v-else class="nav-link " id="pills-st-tab" data-toggle="pill" href="#pills-st" role="tab" aria-controls="pills-st" aria-selected="true">1. Setting Gespräch	</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                        <a v-if="entry.state === 'CLOSING'" class="nav-link active" id="pills-cls-tab" data-toggle="pill" href="#pills-cls" role="tab" aria-controls="pills-cls" aria-selected="false">Closing Call </a>
+                                                        <a v-else class="nav-link" id="pills-cls-tab" data-toggle="pill" href="#pills-cls" role="tab" aria-controls="pills-cls" aria-selected="false">Closing Call </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                        <a v-if="entry.state === 'WON'" class="nav-link active" id="pills-knd-tab" data-toggle="pill" href="#pills-knd" role="tab" aria-controls="pills-knd" aria-selected="false">Kunde gewonnen</a>
+                                                        <a v-else class="nav-link" id="pills-knd-tab" data-toggle="pill" href="#pills-knd" role="tab" aria-controls="pills-knd" aria-selected="false">Kunde gewonnen</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                        <a v-if="entry.state === 'LOST'" class="nav-link active" id="pills-blog-tab" data-toggle="pill" href="#pills-blog" role="tab" aria-controls="pills-blog" aria-selected="false">Kunde verloren</a>
+                                                        <a v-else class="nav-link" id="pills-blog-tab" data-toggle="pill" href="#pills-blog" role="tab" aria-controls="pills-blog" aria-selected="false">Kunde verloren</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="pills-tabContent">
+                                                        <div class="tab-pane fade" id="pills-st" role="tabpanel" aria-labelledby="pills-st-tab">
+                                                            <div class="tab_cont">
+                                                                <h4>Provisionsvergütung: 250,00€</h4>
+                                                                <div class="check_img" v-if="entry.state === 'WON'">
+                                                                    <img src="assets/img/ch_star.png" alt="">
+                                                                    <h3>Provision gutgeschrieben</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="pills-cls" role="tabpanel" aria-labelledby="pills-cls-tab">
+                                                            <div class="tab_cont">
+                                                                <h4>Provisionsvergütung: 250,00€</h4>
+                                                                <div class="check_img">
+                                                                    <img src="assets/img/ch_star.png" alt="">
+                                                                    <h3>Provision gutgeschrieben</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade show active" id="pills-knd" role="tabpanel" aria-labelledby="pills-knd-tab">
+                                                            <div class="tab_cont">
+                                                                <h4>Provisionsvergütung: 250,00€</h4>
+                                                                <div class="check_img">
+                                                                    <img src="assets/img/ch_star.png" alt="">
+                                                                    <h3>Provision gutgeschrieben</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade " id="pills-blog" role="tabpanel" aria-labelledby="pills-blog-tab">
+                                                            <div class="tab_cont">
+                                                                <h4>Provisionsvergütung: 250,00€</h4>
+                                                                <div class="check_img">
+                                                                    <img src="assets/img/ch_star.png" alt="">
+                                                                    <h3>Provision gutgeschrieben</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>  
+                                </div> 
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section-end -->
+
+                    <!-- Section-start -->
+                    <section class="Stk_sec">
+                        <div class="container">
+                            <div class="sec_bg">
+                                <div class="row">
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="sec_title border_btm">
+                                            <h2>Deine <span>Statistiken.</span></h2>
+                                            <p>Deine Provisionen auf einen Blick.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        <div class="graf_img">
+                                            <div class="high-chart aln">
+                                                <p>Netto verdienst in</p>
+                                                <div id="graphL"></div>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                    <li>4</li>
+                                                    <li>5</li>
+                                                    <li>6</li>
+                                                    <li>7</li>
+                                                    <li>8</li>
+                                                    <li>9</li>
+                                                    <li>10</li>
+                                                    <li>11</li>
+                                                    <li>12</li>
+                                                    <li>13</li>
+                                                    <li>14</li>
+                                                    <li>15</li>
+                                                    <li>16</li>
+                                                    <li>17</li>
+                                                    <li>18</li>
+                                                    <li>19</li>
+                                                    <li>20</li>
+                                                    <li>21</li>
+                                                    <li>22</li>
+                                                    <li>23</li>
+                                                    <li>24</li>
+                                                    <li>25</li>
+                                                    <li>26</li>
+                                                    <li>27</li>
+                                                    <li>28</li>
+                                                    <li>29</li>
+                                                    <li>30</li>
+                                                    <li>31</li>
+                                                </ul>
+                                                <h4><small>Netto verdienst dieses Monat:</small> <b>2.347,69</b></h4>
+                                            </div>
+                                            <!-- <img src="assets/img/gr1.png" alt=""> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="graf_img">
+                                            <div class="high-chart">
+                                                <p>Netto verdienst in</p>
+                                                <div id="graph"></div>
+                                                <ul>
+                                                    <li>Jan</li>
+                                                    <li>Feb</li>
+                                                    <li>Mar</li>
+                                                    <li>Apr</li>
+                                                    <li>Mai</li>
+                                                    <li>Jun</li>
+                                                    <li>Jul</li>
+                                                    <li>Aug</li>
+                                                    <li>Sep</li>
+                                                    <li>Okt</li>
+                                                    <li>Nov</li>
+                                                    <li>Dez</li>
+                                                </ul>
+                                                <h4><small>Netto verdienst dieses Jahr:</small> <b>10.348,89</b></h4>
+                                            </div>
+                                            <!-- <img src="assets/img/gr2.png" alt=""> -->
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section-end -->
+
+                    <!-- Section-start -->
+                    <section class="award_sec">
+                        <div class="container">
+                            <div class="sec_bg">
+                                <div class="row">
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="sec_title border_btm">
+                                            <h2>Übersicht zu <span>deinem Award.</span></h2>
+                                            <p>Dein Fortschritt auf einen Blick.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="progress-blk">
+                                            <img src="assets/img/award.png" alt="">
+                                            <div class="content">
+                                                <h2>Road to <br> <span>recommendation</span> Award</h2>
+                                            </div>
+                                        </div>
+                                        <div class="with-prog">
+                                            <div class="prograssbar"></div>
+                                            <p v-if="loading"><span class="prgCnt">{{ myJson.award.currentReferenceCount }}</span>/{{ myJson.award.maxReferenceCount }}  Weiterempfehlungen</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section-end -->
+                </div>
+                <div class="tab-pane fade" id="nav-awards" role="tabpanel" aria-labelledby="nav-awards-tab">...</div>
+                <div class="tab-pane fade" id="nav-dein" role="tabpanel" aria-labelledby="nav-dein-tab">...</div>
+                <div class="tab-pane fade" id="nav-deine" role="tabpanel" aria-labelledby="nav-deine-tab">...</div>
+            </div>
+            
+        </main>
+
+        
+
+		<!-- JS here -->
+        <script src="assets/js/jquery3.4.1.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/raphael-min.js"></script>
+        <script src="assets/js/morris.js"></script> 
+        <script src="assets/vue/vue.js"></script>
+        <script src="assets/vue/axios.min.js"></script>
+        <script src="assets/vue/src/convert.js"></script>
+        <script>
+  
+            window.addEventListener('load', () => {
+                progs();
+                prgcount();
+                ac_inc(); 
+                afl()
+            }); 
+            function progs(){ 
+                let cbg = document.querySelector('.circle-big');
+                let nm  = document.querySelector('.text .span span');
+                let prg = document.querySelector('.circle-big .progress');
+                
+                if (nm) { 
+                    let prv = nm.textContent;
+                    if (prv == 1) {
+                        prg.style.strokeDasharray = '275.56';
+                    }else if (prv == 2) {
+                        prg.style.strokeDasharray = '326.56';
+                    }else if (prv == 3) {
+                        prg.style.strokeDasharray = '440.56';
+                    }else if (prv == 4) {
+                        prg.style.strokeDasharray = '600.56';
+                    }
+                }
+            }
+            function prgcount(){
+                let prgC = document.querySelector('.prgCnt');
+                let mPrg = document.querySelector('.with-prog .prograssbar');
+                if (prgC) { 
+                    mPrg.setAttribute('data-prognm',prgC.textContent);
+                    let root = document.documentElement;
+                    root.style.setProperty('--prog-perc', prgC.textContent+"%"); 
+                }
+            }
+              
+            const bkr = document.querySelectorAll('.ins_left');
+            function ac_inc() { 
+                const bkr = document.querySelectorAll('.ins_left');
+                const brr = document.querySelector('.bkr');
+                if (brr) {
+                    brr.classList.remove('offNow'); 
+                }
+
+
+                bkr.forEach(blk => { 
+                    blk.addEventListener('click', (e) => {
+                        for (let i = 0; i < bkr.length; i++) {
+                            bkr[i].parentElement.parentElement.parentElement.classList.add('offNow');
+                        }
+                        blk.parentElement.parentElement.parentElement.classList.remove('offNow');
+                    })
+
+                });
+            }
+ 
+            function afl(){ 
+   
+
+                let jan,feb,mar,apr,may,jun,jul,aug,sep,okt,nov,diz;
+                    jan = document.querySelector('.jan')
+                    feb = document.querySelector('.feb')
+                    mar = document.querySelector('.mrc')
+                    apr = document.querySelector('.apr')
+                    may = document.querySelector('.mai')
+                    jun = document.querySelector('.jun')
+                    jul = document.querySelector('.jul')
+                    aug = document.querySelector('.aug')
+                    sep = document.querySelector('.sep')
+                    okt = document.querySelector('.okt')
+                    nov = document.querySelector('.nov')
+                    diz = document.querySelector('.diz')
+
+                let n,n2s,n3,n4,n5,n6,n7,n8,n9,n10,n1,n11,n12,n13,n14,n15,n16,n17,n18,n19,n20,n2,n21,n22,n23,n24,n25,n26,n27,n28,n29,n30,n31;
+                    n = document.querySelector('.n')
+                    n2s = document.querySelector('.n2')
+                    n3 = document.querySelector('.n3')
+                    n4 = document.querySelector('.n4')
+                    n5 = document.querySelector('.n5')
+                    n6 = document.querySelector('.n6')
+                    n7 = document.querySelector('.n7')
+                    n8 = document.querySelector('.n8')
+                    n9 = document.querySelector('.n9')
+                    n10 = document.querySelector('.n10')
+                    n11 = document.querySelector('.n11')
+                    n12 = document.querySelector('.n12')
+                    n13 = document.querySelector('.n13')
+                    n14 = document.querySelector('.n14')
+                    n15 = document.querySelector('.n15')
+                    n16 = document.querySelector('.n16')
+                    n17 = document.querySelector('.n17')
+                    n18 = document.querySelector('.n18')
+                    n19 = document.querySelector('.n19')
+                    n20 = document.querySelector('.n20')
+                    n21 = document.querySelector('.n21')
+                    n22 = document.querySelector('.n22')
+                    n23 = document.querySelector('.n23')
+                    n24 = document.querySelector('.n24')
+                    n25 = document.querySelector('.n25')
+                    n26 = document.querySelector('.n26')
+                    n27 = document.querySelector('.n27')
+                    n28 = document.querySelector('.n28')
+                    n29 = document.querySelector('.n29')
+                    n30 = document.querySelector('.n30')
+                    n31 = document.querySelector('.n31')
+
+
+                var neg_data = [
+                    {"period": "2011-09-25", "a": n.textContent},
+                    {"period": "2011-09-25", "a": n2s.textContent},
+                    {"period": "2010-09-25", "a": n3.textContent},
+                    {"period": "2010-09-25", "a": n4.textContent},
+                    {"period": "2010-09-25", "a": n5.textContent},
+                    {"period": "2010-09-25", "a": n6.textContent},
+                    {"period": "2009-09-25", "a": n7.textContent},
+                    {"period": "2009-10-25", "a": n8.textContent},
+                    {"period": "2009-09-25", "a": n9.textContent},
+                    {"period": "2009-09-25", "a": n10.textContent},
+                    {"period": "2009-09-25", "a": n11.textContent},
+                    {"period": "2009-09-25", "a": n12.textContent},
+                    {"period": "2009-09-25", "a": n13.textContent},
+                    {"period": "2009-09-25", "a": n14.textContent},
+                    {"period": "2009-09-25", "a": n15.textContent},
+                    {"period": "2009-09-25", "a": n16.textContent},
+                    {"period": "2009-09-25", "a": n17.textContent},
+                    {"period": "2009-09-25", "a": n18.textContent},
+                    {"period": "2009-09-25", "a": n19.textContent},
+                    {"period": "2009-09-25", "a": n20.textContent},
+                    {"period": "2009-09-25", "a": n21.textContent},
+                    {"period": "2009-09-25", "a": n22.textContent},
+                    {"period": "2009-09-25", "a": n23.textContent},
+                    {"period": "2009-09-25", "a": n24.textContent},
+                    {"period": "2009-09-25", "a": n25.textContent},
+                    {"period": "2009-09-25", "a": n26.textContent},
+                    {"period": "2009-09-25", "a": n27.textContent},
+                    {"period": "2009-09-25", "a": n28.textContent},
+                    {"period": "2009-09-25", "a": n29.textContent},
+                    {"period": "2009-09-25", "a": n30.textContent},
+                    {"period": "2009-09-25", "a": n31.textContent}
+                    ];
+                    Morris.Line({
+                    element: 'graphL',
+                    data: neg_data,
+                    xkey: 'period',
+                    ykeys: ['a'],
+                    labels: ['Series A'],
+                    units: '%'
+                });
+    
+                Morris.Bar({
+                    element: 'graph',
+                    data: [
+                        {x: 'Jan', y:  jan.textContent},
+                        {x: 'Feb', y:  feb.textContent},
+                        {x: 'Mar', y:  mar.textContent},
+                        {x: 'Apr', y:  apr.textContent},
+                        {x: 'Mai', y:  may.textContent},
+                        {x: 'Jun', y:  jun.textContent},
+                        {x: 'Jul', y:  jul.textContent},
+                        {x: 'Aug', y:  aug.textContent},
+                        {x: 'Sep', y:  sep.textContent},
+                        {x: 'Okt', y:  okt.textContent},
+                        {x: 'Nov', y:  nov.textContent},
+                        {x: 'Dez', y:  diz.textContent}
+                    ],
+                    xkey: 'x',
+                    ykeys: ['y'],
+                    labels: ['Y'],
+                    barColors: function (row, series, type) {
+                        if (type === 'bar') {
+                        return '#e4c064';
+                        }
+                        else {
+                        return '#000';
+                        }
+                    }
+                });
+                document.querySelector('.userInfo').addEventListener('click', (e) => {
+                    e.preventDefault();
+                }) 
+   
+            }
+ 
+        </script>
+    </body>
+</html>

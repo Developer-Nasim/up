@@ -1,0 +1,74 @@
+{
+   "firstname":"Jonas aaa",
+   "lastname":"Graf",
+   "accountBalance":2571.0,
+   "references":[
+      {
+         "firstname":"Max",
+         "lastname":"Test",
+         "email":"test1@test.de",
+         "phone":"+4916098004056",
+         "product":"Digital Scaling Agency",
+         "provision":250.0,
+         "state":"LOST"
+      },
+      {
+         "firstname":"Jules",
+         "lastname":"Test",
+         "email":"test2@test.de",
+         "phone":"+4916098004056",
+         "product":"Digital Scaling Agency",
+         "provision":250.0,
+         "state":"SETTING"
+      },
+      {
+         "firstname":"Peter",
+         "lastname":"Test",
+         "email":"test2@test.de",
+         "phone":"+4916098004056",
+         "product":"Digital Scaling Agency",
+         "provision":250.0,
+         "state":"WON"
+      },
+      {
+         "firstname":"Niko",
+         "lastname":"Test",
+         "email":"test2@test.de",
+         "phone":"+4916098004056",
+         "product":"Digital Scaling Agency",
+         "provision":250.0,
+         "state":"CLOSING"
+      }
+   ],
+   "rank":{
+      "name":"Rookie",
+      "referenceCount":2,
+      "goalReferenceCount":4,
+      "currentEarning":10.0,
+      "nextEarning":15.0,
+      "currentRankIndex":1,
+      "nextRankIndex":2,
+      "maxRankIndex":4,
+      "nextRankName":"Anwärter"
+   },
+   "stats":{
+      "month":{
+         "1":123.0,
+         "2":123.0
+      },
+      "year":{
+         "Jan":1273.0,
+         "Feb":1283.0,
+         "Mar":1233.0,
+         "Apr":1233.0,
+         "Mai":12783.0
+      },
+      "netIncomeMonth":2454.0,
+      "netIncomeYear":5454878.0
+   },
+   "award":{
+      "name":"recommendation",
+      "currentReferenceCount":20,
+      "maxReferenceCount":100
+   }
+}
