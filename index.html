@@ -507,6 +507,7 @@
                     nov = document.querySelector('.nov')
                     diz = document.querySelector('.diz')
 
+                 
                 let n,n2s,n3,n4,n5,n6,n7,n8,n9,n10,n1,n11,n12,n13,n14,n15,n16,n17,n18,n19,n20,n2,n21,n22,n23,n24,n25,n26,n27,n28,n29,n30,n31;
                     n = document.querySelector('.n')
                     n2s = document.querySelector('.n2')
@@ -540,81 +541,83 @@
                     n30 = document.querySelector('.n30')
                     n31 = document.querySelector('.n31')
 
-
-                var neg_data = [
-                    {"period": "2011-09-25", "a": n.textContent},
-                    {"period": "2011-09-25", "a": n2s.textContent},
-                    {"period": "2010-09-25", "a": n3.textContent},
-                    {"period": "2010-09-25", "a": n4.textContent},
-                    {"period": "2010-09-25", "a": n5.textContent},
-                    {"period": "2010-09-25", "a": n6.textContent},
-                    {"period": "2009-09-25", "a": n7.textContent},
-                    {"period": "2009-10-25", "a": n8.textContent},
-                    {"period": "2009-09-25", "a": n9.textContent},
-                    {"period": "2009-09-25", "a": n10.textContent},
-                    {"period": "2009-09-25", "a": n11.textContent},
-                    {"period": "2009-09-25", "a": n12.textContent},
-                    {"period": "2009-09-25", "a": n13.textContent},
-                    {"period": "2009-09-25", "a": n14.textContent},
-                    {"period": "2009-09-25", "a": n15.textContent},
-                    {"period": "2009-09-25", "a": n16.textContent},
-                    {"period": "2009-09-25", "a": n17.textContent},
-                    {"period": "2009-09-25", "a": n18.textContent},
-                    {"period": "2009-09-25", "a": n19.textContent},
-                    {"period": "2009-09-25", "a": n20.textContent},
-                    {"period": "2009-09-25", "a": n21.textContent},
-                    {"period": "2009-09-25", "a": n22.textContent},
-                    {"period": "2009-09-25", "a": n23.textContent},
-                    {"period": "2009-09-25", "a": n24.textContent},
-                    {"period": "2009-09-25", "a": n25.textContent},
-                    {"period": "2009-09-25", "a": n26.textContent},
-                    {"period": "2009-09-25", "a": n27.textContent},
-                    {"period": "2009-09-25", "a": n28.textContent},
-                    {"period": "2009-09-25", "a": n29.textContent},
-                    {"period": "2009-09-25", "a": n30.textContent},
-                    {"period": "2009-09-25", "a": n31.textContent}
-                    ];
-                    Morris.Line({
-                    element: 'graphL',
-                    data: neg_data,
-                    xkey: 'period',
-                    ykeys: ['a'],
-                    labels: ['Series A'],
-                    units: '%'
-                });
+                    if (jan && n) {
+                       
+                        var neg_data = [
+                            {"period": "2011-09-25", "a": n.textContent},
+                            {"period": "2011-09-25", "a": n2s.textContent},
+                            {"period": "2010-09-25", "a": n3.textContent},
+                            {"period": "2010-09-25", "a": n4.textContent},
+                            {"period": "2010-09-25", "a": n5.textContent},
+                            {"period": "2010-09-25", "a": n6.textContent},
+                            {"period": "2009-09-25", "a": n7.textContent},
+                            {"period": "2009-10-25", "a": n8.textContent},
+                            {"period": "2009-09-25", "a": n9.textContent},
+                            {"period": "2009-09-25", "a": n10.textContent},
+                            {"period": "2009-09-25", "a": n11.textContent},
+                            {"period": "2009-09-25", "a": n12.textContent},
+                            {"period": "2009-09-25", "a": n13.textContent},
+                            {"period": "2009-09-25", "a": n14.textContent},
+                            {"period": "2009-09-25", "a": n15.textContent},
+                            {"period": "2009-09-25", "a": n16.textContent},
+                            {"period": "2009-09-25", "a": n17.textContent},
+                            {"period": "2009-09-25", "a": n18.textContent},
+                            {"period": "2009-09-25", "a": n19.textContent},
+                            {"period": "2009-09-25", "a": n20.textContent},
+                            {"period": "2009-09-25", "a": n21.textContent},
+                            {"period": "2009-09-25", "a": n22.textContent},
+                            {"period": "2009-09-25", "a": n23.textContent},
+                            {"period": "2009-09-25", "a": n24.textContent},
+                            {"period": "2009-09-25", "a": n25.textContent},
+                            {"period": "2009-09-25", "a": n26.textContent},
+                            {"period": "2009-09-25", "a": n27.textContent},
+                            {"period": "2009-09-25", "a": n28.textContent},
+                            {"period": "2009-09-25", "a": n29.textContent},
+                            {"period": "2009-09-25", "a": n30.textContent},
+                            {"period": "2009-09-25", "a": n31.textContent}
+                            ];
+                            Morris.Line({
+                            element: 'graphL',
+                            data: neg_data,
+                            xkey: 'period',
+                            ykeys: ['a'],
+                            labels: ['Series A'],
+                            units: '%'
+                        });
+            
+                        Morris.Bar({
+                            element: 'graph',
+                            data: [
+                                {x: 'Jan', y:  jan.textContent},
+                                {x: 'Feb', y:  feb.textContent},
+                                {x: 'Mar', y:  mar.textContent},
+                                {x: 'Apr', y:  apr.textContent},
+                                {x: 'Mai', y:  may.textContent},
+                                {x: 'Jun', y:  jun.textContent},
+                                {x: 'Jul', y:  jul.textContent},
+                                {x: 'Aug', y:  aug.textContent},
+                                {x: 'Sep', y:  sep.textContent},
+                                {x: 'Okt', y:  okt.textContent},
+                                {x: 'Nov', y:  nov.textContent},
+                                {x: 'Dez', y:  diz.textContent}
+                            ],
+                            xkey: 'x',
+                            ykeys: ['y'],
+                            labels: ['Y'],
+                            barColors: function (row, series, type) {
+                                if (type === 'bar') {
+                                return '#e4c064';
+                                }
+                                else {
+                                return '#000';
+                                }
+                            }
+                        });
+                        document.querySelector('.userInfo').addEventListener('click', (e) => {
+                            e.preventDefault();
+                        }) 
     
-                Morris.Bar({
-                    element: 'graph',
-                    data: [
-                        {x: 'Jan', y:  jan.textContent},
-                        {x: 'Feb', y:  feb.textContent},
-                        {x: 'Mar', y:  mar.textContent},
-                        {x: 'Apr', y:  apr.textContent},
-                        {x: 'Mai', y:  may.textContent},
-                        {x: 'Jun', y:  jun.textContent},
-                        {x: 'Jul', y:  jul.textContent},
-                        {x: 'Aug', y:  aug.textContent},
-                        {x: 'Sep', y:  sep.textContent},
-                        {x: 'Okt', y:  okt.textContent},
-                        {x: 'Nov', y:  nov.textContent},
-                        {x: 'Dez', y:  diz.textContent}
-                    ],
-                    xkey: 'x',
-                    ykeys: ['y'],
-                    labels: ['Y'],
-                    barColors: function (row, series, type) {
-                        if (type === 'bar') {
-                        return '#e4c064';
-                        }
-                        else {
-                        return '#000';
-                        }
                     }
-                });
-                document.querySelector('.userInfo').addEventListener('click', (e) => {
-                    e.preventDefault();
-                }) 
-   
             }
  
         </script>
