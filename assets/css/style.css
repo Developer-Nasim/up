@@ -954,18 +954,72 @@ div#graphL {
     display: flex;
     padding-left: 15px;
 }
+.grf .modal-title {
+    font-size: 36px;
+	font-family: "Oswald";
+}
 
+.modal-header {
+    padding-top: 25px;
+}
+.modal-header button.close {
+    font-size: 32px;
+    padding: 0;
+    margin-right: 0;
+}
 
+form .modal-body {
+    padding: 20px 30px;
+    padding-top: 5px;
+}
 
+form .modal-body label {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 700;
+    padding-top: 15px;
+}
 
+form .modal-body label input {
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    border: 1px solid #e9ecef;
+    border-radius: 2px;
+    background: #f3f3f5;
+    margin-top: 5px;
+    outline: none;
+}
 
+form .modal-body label input::placeholder {
+    font-weight: 700;
+}
 
+form .modal-body 
+ label.select {
+    font-size: 15px;
+    font-weight: 300;
+}
 
+form .modal-body label.select select {
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border: 1px solid #e9ecef;
+    border-radius: 2px;
+    outline: none;
+}
+form  .modal-footer button {
+    background: #e4c064;
+    font-weight: 700;
+    color: #000;
+    box-shadow: none;
+}
 
-
-
-
-
-
-
-
+form .modal-footer button:hover {
+    background: #6c757d;
+}  
