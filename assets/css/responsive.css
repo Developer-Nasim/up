@@ -1,6 +1,9 @@
 /* Normal desktop :1200px. */
 @media (min-width: 1200px) and (max-width: 1500px) {
 
+    .menus ul {
+        left: -40px;
+    }
 
 }
 
@@ -25,6 +28,11 @@
 .high-chart ul { 
     width: 340px; 
 }
+.menus ul {
+    left: -40px;
+}
+
+
 
 }
 
